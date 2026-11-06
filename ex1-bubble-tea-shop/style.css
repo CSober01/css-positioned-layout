@@ -1,5 +1,61 @@
 body {
-  font-family: "Kanit";
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #000000;
+  position: relative;
 }
 
-/* Start coding here */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  border: 8px solid #ffffff;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 38%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent);
+}
+
+.card h1 {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 16px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.location {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 24px;
+  margin: 0;
+  padding: 8px 18px;
+  background-color: #9a9a9a;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+}
